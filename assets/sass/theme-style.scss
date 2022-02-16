@@ -1,0 +1,120 @@
+/* Fonts */
+
+@font-face{
+    font-family: Garamond-Italic;
+    src:url('../fonts/Garamond-Italic.otf') format('otf'),
+    url('../fonts/Garamond-Italic.woff') format('woff'),
+    url('../fonts/Garamond-Italic.ttf') format('ttf'),
+    url('../fonts/Garamond-Italic.svg') format('svg');
+    font-display:swap;
+}
+@font-face{
+  font-family: helvetica-Neue-Light;
+  src:url('../fonts/Helvetica-Neue-Light.otf') format('otf'),
+  url('../fonts/Helvetica-Neue-Light.woff') format('woff'),
+  url('../fonts/Helvetica-Neue-Light.ttf') format('ttf'),
+  url('../fonts/Helvetica-Neue-Light.svg') format('svg');
+  font-display:swap;
+}
+*{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.main{
+    font-family: helvetica-Neue-Light;
+    font-size: 14px;
+    span{
+        font-family: Garamond-Italic;
+    }
+    .page-wrapper{
+        max-width: 1000px;
+        margin: auto;
+        padding: 50px 20px;
+        text-align: center;
+        .logo{
+            width: 150px;
+        }
+        .page-title{
+            font-size: 85px;
+            margin-bottom: 0px;
+            font-weight: normal;
+            margin-top: 70px;
+        }
+        .page-subtitle{
+            margin: 0px;
+        }
+        .page-links{
+            margin: 100px 0px;
+            list-style-type: none;
+            padding-left: 0px;
+            .link{
+                padding: 20px 0px;
+                text-align: left;
+                border-top: 1px solid black;
+                position: relative;
+                &:last-child{
+                    border-bottom: 1px solid black;
+                }
+                a{
+                    font-size: 22px;
+                    text-decoration: none;
+                    color:black;
+                    transition: color 250ms ease-in-out;
+
+                    &:after{
+                        content:"";
+                        background-image: url(../images/arrow.svg);
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 30%;
+                        height: 25px;
+                        width: 37px;
+                        overflow: hidden;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+
+                    @media(min-width:769px){
+                        &:hover{
+                            color:#00843E;
+
+                            &::after{
+                                background-image: url(../images/arrow-hovered.svg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .page-footer-text{
+            margin: 0px 0px 70px;
+        }
+        @media(max-width:1200px){
+            max-width: 900px;
+        }
+        @media(max-width:768px){
+            .logo{
+                width: 90px;
+            }
+            .page-title{
+                margin-top: 40px;
+                font-size: 40px;
+            }
+            .page-subtitle{
+                margin-top: 10px;
+            }
+            .page-links{
+                margin: 60px 0px;
+                .link{
+                    a{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .page-footer-text{
+                margin: 0px;
+            }
+        }
+    }
+}
