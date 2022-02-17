@@ -21,33 +21,40 @@
 }
 .main{
     font-family: helvetica-Neue-Light;
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+
+    @media(max-width:768px){
+        font-size: 14px;
+    }
     span{
         font-family: Garamond-Italic;
     }
     .page-wrapper{
-        max-width: 1000px;
+        max-width: 984px;
         margin: auto;
-        padding: 50px 20px;
+        padding: 99px 0px 100px;
         text-align: center;
         .logo{
-            width: 150px;
+            width: 206px;
         }
         .page-title{
-            font-size: 85px;
+            font-weight: 300;
+            font-size: 119.077px;
+            line-height: 144px;
             margin-bottom: 0px;
-            font-weight: normal;
-            margin-top: 70px;
+            margin-top: 81px;
         }
         .page-subtitle{
-            margin: 0px;
+            margin: 0.46px 0px 0px;
         }
         .page-links{
-            margin: 100px 0px;
+            margin: 111px 0px 156px;
             list-style-type: none;
             padding-left: 0px;
             .link{
-                padding: 20px 0px;
+                padding: 2.97px 0px;
                 text-align: left;
                 border-top: 1px solid black;
                 position: relative;
@@ -55,7 +62,9 @@
                     border-bottom: 1px solid black;
                 }
                 a{
-                    font-size: 22px;
+                    font-weight: 300;
+                    font-size: 32px;
+                    line-height: 294.75%;
                     text-decoration: none;
                     color:black;
                     transition: color 250ms ease-in-out;
@@ -66,9 +75,9 @@
                         display: block;
                         position: absolute;
                         right: 0;
-                        top: 30%;
-                        height: 25px;
-                        width: 37px;
+                        top: 35%;
+                        height: 31.27px;
+                        width: 38px;
                         overflow: hidden;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -94,12 +103,14 @@
             max-width: 900px;
         }
         @media(max-width:768px){
+            padding: 50px 20px 100px;
             .logo{
-                width: 90px;
+                width: 125px;
             }
             .page-title{
                 margin-top: 40px;
                 font-size: 40px;
+                line-height: normal;
             }
             .page-subtitle{
                 margin-top: 10px;
@@ -109,6 +120,9 @@
                 .link{
                     a{
                         font-size: 18px;
+                        &:after{
+                            top: 25%;
+                        }
                     }
                 }
             }
