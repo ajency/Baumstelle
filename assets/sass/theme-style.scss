@@ -19,6 +19,9 @@
 *{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
+body{
+    color: #3D1115;
+}
 .main{
     font-family: helvetica-Neue-Light;
     font-size: 18px;
@@ -30,43 +33,52 @@
     }
     span{
         font-family: Garamond-Italic;
+        font-weight: 400;
     }
     .page-wrapper{
         max-width: 984px;
         margin: auto;
-        padding: 99px 0px 100px;
+        padding: 41px 0px 110px;
         text-align: center;
         .logo{
-            width: 206px;
+            width: 154.32px;
+
+            @media(min-width:992px){
+                height: 250.96px;
+                object-fit: contain;
+                object-position: top;
+            }
         }
         .page-title{
             font-weight: 300;
             font-size: 119.077px;
             line-height: 144px;
             margin-bottom: 0px;
-            margin-top: 81px;
+            margin-top: 29.04px;
         }
         .page-subtitle{
-            margin: 0.46px 0px 0px;
+            margin: 7px 0px 0px;
+            font-size: 21px;
+            line-height: 24px;
         }
         .page-links{
-            margin: 111px 0px 156px;
+            margin: 62.46px 0px 62px;
             list-style-type: none;
             padding-left: 0px;
             .link{
                 padding: 2.97px 0px;
                 text-align: left;
-                border-top: 1px solid black;
+                border-top: 1px solid #3D1115;
                 position: relative;
                 &:last-child{
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid #3D1115;
                 }
                 a{
                     font-weight: 300;
                     font-size: 32px;
                     line-height: 294.75%;
                     text-decoration: none;
-                    color:black;
+                    color:#3D1115;
                     transition: color 250ms ease-in-out;
 
                     &:after{
@@ -75,9 +87,9 @@
                         display: block;
                         position: absolute;
                         right: 0;
-                        top: 35%;
-                        height: 31.27px;
-                        width: 38px;
+                        top: 29%;
+                        height: 44.1px;
+                        width: 32.78px;
                         overflow: hidden;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -96,14 +108,32 @@
                 }
             }
         }
+        .contact-details{
+            margin-bottom: 104px;
+            a{
+                text-decoration: none;
+                color: #3D1115;
+                transition: color 250ms ease-in-out;
+
+                @media(min-width:769px){
+                    &:hover{
+                        color:#00843E;
+                    }
+                }
+            }
+            .address{
+                margin: 0px;
+            }
+        }
         .page-footer-text{
-            margin: 0px 0px 70px;
+            margin: 0px;
+            min-height: 62px;
         }
         @media(max-width:1200px){
             max-width: 900px;
         }
         @media(max-width:768px){
-            padding: 50px 20px 100px;
+            padding: 41px 20px;
             .logo{
                 width: 125px;
             }
@@ -114,6 +144,7 @@
             }
             .page-subtitle{
                 margin-top: 10px;
+                font-size:18px;
             }
             .page-links{
                 margin: 60px 0px;
@@ -122,9 +153,14 @@
                         font-size: 18px;
                         &:after{
                             top: 25%;
+                            height: 32px;
+                            background-size: contain;
                         }
                     }
                 }
+            }
+            .contact-details{
+                margin-bottom:60px;
             }
             .page-footer-text{
                 margin: 0px;
